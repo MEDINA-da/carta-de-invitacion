@@ -6,9 +6,15 @@ from email.mime.multipart import MIMEMultipart
 app = Flask(__name__)
 app.secret_key = 'Ana250903.' # Cambia esto por una clave real y segura
 
+import os
+
+# ... (código existente)
+
 # Configuración del correo electrónico
-EMAIL_ADDRESS = 'cumpledeana22@gmail.com' # Reemplaza con tu dirección de correo
-EMAIL_PASSWORD = 'itzq cgrn lbul uhdx' # Reemplaza con tu contraseña de aplicación
+EMAIL_ADDRESS = os.environ.get('EMAIL_ADDRESS')
+EMAIL_PASSWORD = os.environ.get('EMAIL_PASSWORD')
+
+# ... (resto del código)
 
 @app.route('/')
 def index():
