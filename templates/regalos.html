@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideas para Regalos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Ideas para regalos</h1>
+        <p>Hola, {{ nombre }}. ¡Gracias por confirmar! Si quieres, puedes seleccionar una idea de regalo.</p>
+        <form action="/enviar_regalos" method="post">
+            <input type="hidden" name="nombre_invitado" value="{{ nombre }}">
+            <div class="regalo-opciones">
+                <label class="regalo-item">
+                    <input type="radio" name="regalo" value="Jägermeister" required>
+                    <img src="https://dailydosegurugram.in/wp-content/uploads/2024/11/Jagermeister.jpg" alt="Jägermeister">
+                    <span>Jägermeister</span>
+                </label>
+                <label class="regalo-item">
+                    <input type="radio" name="regalo" value="pisco_cuatro_gallos">
+                    <img src="https://fonowaska.com/wp-content/uploads/2023/11/Cuatro-Gallos-Puro-Quebranta-700ml-1.jpg" alt="Pisco Cuatro Gallos">
+                    <span>Pisco Cuatro Gallos</span>
+                </label>
+                <label class="regalo-item">
+                    <input type="radio" name="regalo" value="ron_flor_de_caña">
+                    <img src="https://www.whisky.com/fileadmin/_processed_/b/7/csm_Flor_de_Cana_12_First_Edition_fa2b657824.jpg" alt="Ron Flor de Caña">
+                    <span>Ron Flor de Caña</span>
+                </label>
+            </div>
+            <button type="submit">Enviar selección</button>
+        </form>
+    </div>
+</body>
+</html>

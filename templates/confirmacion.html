@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>¿Asistirás?</h1>
+        <form action="/asistencia" method="post">
+            <input type="radio" id="si" name="asistencia" value="si" checked>
+            <label for="si">Sí</label><br>
+            <input type="radio" id="no" name="asistencia" value="no">
+            <label for="no">No</label><br><br>
+            <button type="submit">Confirmar</button>
+        </form>
+    </div>
+</body>
+</html>
